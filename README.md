@@ -18,7 +18,7 @@ You can view the app at http://form-requests.test:7575/
 
 To create a form request class you can run `php artisan make:request StoreBusinessFormRequest`.
 
-This would create a new form request class in `App\Http\Requests` called `StoreBusinessFormRequest.php`.
+This would create a new form request class in `app\Http\Requests` called `StoreBusinessFormRequest.php`.
 
 You then just need to import this into your controller and use DI to inject it into your method as per the commented out example in the code.
 
