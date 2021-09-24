@@ -32,7 +32,7 @@
 
         <div class="form-group">
             <label for="type">Where did you hear about us? *</label>
-            <select class="form-control" id="where_did_you_hear_about_us" name="where_did_you_hear_about_us" value="{{ old('where_did_you_hear_about_us') }}">
+            <select class="form-control" id="where_did_you_hear_about_us" name="where_did_you_hear_about_us">
                 <option>Select option</option>
                 <option value="facebook" {{ old('where_did_you_hear_about_us') == 'facebook' ? 'selected' : '' }}>Facebook</option>
                 <option value="instagram" {{ old('where_did_you_hear_about_us') == 'instagram' ? 'selected' : '' }}>Instagram</option>

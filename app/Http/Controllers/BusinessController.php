@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Business;
+use App\Http\Requests\StoreBusinessFormRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -31,12 +32,13 @@ class BusinessController extends Controller
             'name'                        => 'required|max:255',
             'type'                        => 'required|in:salon,freelance,home,venue',
             'instagram_username'          => 'sometimes|max:50',
-            'where_did_you_hear_about_us' => 'required|in:internet search,facebook,instagram,word of mouth,tik tok,other',
+            'where_did_you_hear_about_us' => 'required|in:internet search,facebook,instagram,word of mouth,tiktok,other',
             'discount_code'               => 'sometimes|max:8',
         ];
 
         $messages = [
             'where_did_you_hear_about_us.required' => 'Please tell us where you heard about us.',
+            'where_did_you_hear_about_us.in'       => 'Please tell us where you heard about us.',
         ];
 
         $customAttributes = [
@@ -60,4 +62,19 @@ class BusinessController extends Controller
 
         return redirect(route('businesses.show', ['business' => $business]));
     }
+
+    // public function store(StoreBusinessFormRequest $request)
+    // {
+    //     $validated = $request->validated();
+
+    //     $business = Business::create([
+    //         'name'                        => $validated['name'],
+    //         'type'                        => $validated['type'],
+    //         'instagram_username'          => $validated['instagram_username'],
+    //         'where_did_you_hear_about_us' => $validated['where_did_you_hear_about_us'],
+    //         'discount_code'               => $validated['discount_code'],
+    //     ]);
+
+    //     return redirect(route('businesses.show', ['business' => $business]));
+    // }
 }
