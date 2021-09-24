@@ -28,7 +28,7 @@ You then just need to import this into your controller and use DI to inject it i
 
 Using a form request class means we have a reusable piece of code.
 
-In this business example if we created an edit method, and didn't use a form request class, we'd need to copy and paste all of our inline validation code.
+In this business example if we created an edit method, and didn't use a form request class, we'd need to copy and paste all of our inline validation code to validate the exact same fields as in our store method.
 
 If we needed to change a rule in the future now we'd need to update this rule in multiple places.
 
