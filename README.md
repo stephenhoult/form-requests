@@ -34,6 +34,8 @@ In this business example if we created an edit method, and didn't use a form req
 
 If we needed to change a rule in the future now we'd need to update this rule in multiple places.
 
+Another example would be, we've already got a web app and now we're creating an API for a mobile app. We wouldn't want to duplicate the web app validation for the mobile API and by using form request classes we could avoid doing this by reusing the same class.
+
 ### Readability
 
 Using form request classes also makes your code more readable as you greatly reduce the amount of code in your controller.
