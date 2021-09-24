@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Business;
-use App\Http\Requests\StoreBusinessFormRequest;
+// use App\Http\Requests\StoreBusinessFormRequest; // uncomment to use the form request
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -26,6 +26,7 @@ class BusinessController extends Controller
         return view('businesses.create');
     }
 
+    // comment this method to use the FormRequest version
     public function store(Request $request)
     {
         $rules = [
@@ -63,8 +64,11 @@ class BusinessController extends Controller
         return redirect(route('businesses.show', ['business' => $business]));
     }
 
+    // uncomment this method to use the FormRequest version
     // public function store(StoreBusinessFormRequest $request)
     // {
+    //     // using $request->validated() means we only have validated data to use later
+    //     // this prevents any non validated input slipping through
     //     $validated = $request->validated();
 
     //     $business = Business::create([
