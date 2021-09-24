@@ -4,6 +4,8 @@
 
 Add `127.0.0.1 form-requests.test` to your hosts file.
 
+Rename the `.env.example` file found in the root directory to `.env`. 
+
 `docker-compose up` to bring up docker.
 
 `docker exec -it form-requests_php_1 bash` to ssh into the php container.
