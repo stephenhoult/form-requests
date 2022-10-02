@@ -39,3 +39,7 @@ Another example would be, we've already got a web app and now we're creating an 
 ### Readability
 
 Using form request classes also makes your code more readable as you greatly reduce the amount of code in your controller.
+
+### Testability
+
+Using form request classes make your code more testable as you can create tests unit tests to test the class specifically rather than testing your inline validation indirectly by hitting an endpoint in a feature test.
