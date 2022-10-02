@@ -1,5 +1,9 @@
 # Form requests
 
+## Purpose
+
+This repo exists to demonstrate how to and why you should use Laravel's Form Request classes.
+
 ## Setup
 
 Add `127.0.0.1 form-requests.test` to your hosts file.
